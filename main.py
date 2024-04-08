@@ -1,4 +1,4 @@
-from replit import clear
+import os
 
 from art import logo
 
@@ -10,7 +10,7 @@ bidding_finished = False
 def find_highest_bidder(bidding_record):
   highest_bid = 0
   winner = ""
-  # bidding_record = {"Angela": 123, "James": 321}
+  # bidding_record = {"Ritika": 123, "Anmol": 321}
   for bidder in bidding_record:
     bid_amount = bidding_record[bidder]
     if bid_amount > highest_bid: 
@@ -27,6 +27,6 @@ while not bidding_finished:
     bidding_finished = True
     find_highest_bidder(bids)
   elif should_continue == "yes":
-    clear()
+    os.system('cls')
   
 
